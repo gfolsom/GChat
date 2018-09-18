@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node start"
   },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
   "repository": {
     "type": "git",
     "url": "GChat"
