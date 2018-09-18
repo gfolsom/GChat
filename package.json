@@ -1,0 +1,15 @@
+{
+  "name": "gchat",
+  "version": "1.0.0",
+  "description": "Blockchain Chat application",
+  "main": "index.js",
+  "scripts": {
+    "test": "node start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "GChat"
+  },
+  "author": "Grant Folsom",
+  "license": "ISC"
+}
