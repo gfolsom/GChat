@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/start', (req, res) => {
+app.get('/#', (req, res) => {
   res.sendFile(path.join(__dirname +'/index.html'));
 });
 

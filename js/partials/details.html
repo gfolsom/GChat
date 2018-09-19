@@ -1,27 +1,56 @@
 <div class="container">
-    <div class="row">
-      <div class="col-12 mt-3">
-          <div class="card">
-            <div class="card-header d-flex align-items-start justify-content-between">
-              <h1 class="card-title my-0">{{people[whichItem].name}}</h1>
-              <nav class="btn-group">
-                <a class="btn btn-sm btn-secondary" 
-                  href="#/details/{{prevItem}}">&lt;</a>
-                <a class="btn btn-sm btn-secondary" 
-                  href="#/">&bull;</a>
-                <a class="btn btn-sm btn-secondary" 
-                  href="#/details/{{nextItem}}">&gt;</a>
-              </nav>
-            </div>
-            <div class="card-body"
-              ng-model="people">
-              <h4 class="card-title text-dark mt-0">{{people[whichItem].reknown}}</h4>
-              <img class="float-left mr-2 rounded"
+  <div class="card">
+    <div class="card-body mt-3">
+      <div class="row">
+        <div class="col-3 col-md-auto" ng-model="people">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="/details/{{whichItem}}/#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">              
+                <img class="float-left mr-2 rounded" height="35" width="35"
                 ng-src="images/{{people[whichItem].shortname}}_tn.jpg"
-                alt="Photo of {{people[whichItem].name}}">
-              <div class="card-text text-secondary">{{people[whichItem].bio}}</div>
+                alt="Photo of {{people[whichItem].name}}">{{people[whichItem].name}}
+              </a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="/details/{{whichItem}}/#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">                
+                <img class="float-left mr-2 rounded" height="35" width="35"
+                ng-src="images/{{people[1].shortname}}_tn.jpg"
+                alt="Photo of {{people[1].name}}">{{people[1].name}}
+              </a>
+              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/details/{{whichItem}}/#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">                <img class="float-left mr-2 rounded" height="35" width="35"
+                ng-src="images/{{people[2].shortname}}_tn.jpg"
+                alt="Photo of {{people[2].name}}">{{people[2].name}}
+              </a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/details/{{whichItem}}/#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">                <img class="float-left mr-2 rounded" height="35" width="35"
+                ng-src="images/{{people[3].shortname}}_tn.jpg"
+                alt="Photo of {{people[3].name}}">{{people[3].name}}
+              </a>
             </div>
-          </div>
+        </div>
+        <div class="col-lg">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                   <div class="row">
+                      <div class="form-group">
+                          <textarea class="form-control" rows="10" id="history"></textarea>
+                        </div>
+                      </div>
+
+
+                   </div>
+                   <div class="row">
+                    <div class="form-group">
+                          <label for="comment">Type your message:</label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                          <div class="form-group-append">
+                              <button class="btn btn-success" type="submit">Go</button> 
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Test 2</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Test 3</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Test 4</div>
+              </div>
+         </div>
       </div>
     </div>
   </div>
+</div>
